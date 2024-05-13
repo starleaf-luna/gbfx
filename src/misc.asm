@@ -262,3 +262,15 @@ DelayFrames::
 	dec c
 	jr nz, DelayFrames
 	ret
+
+; ----------------
+; | ROUTINE      |
+; ----------------
+; ClearScreen
+; clears both tilemaps
+
+ClearScreen::
+	ld hl, $9800
+	ld bc, (SCRN_VX_B * SCRN_VY_B) * 2
+	xor a
+	jp LCDMemset

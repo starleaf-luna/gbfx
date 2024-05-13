@@ -92,7 +92,7 @@ ENDR
 	ld a, b
 	ldh [hHeldKeys], a
 
-	pop af ; Pop off return address as well to exit infinite loop
+	; pop af ; Pop off return address as well to exit infinite loop
 .lagFrame
 	ldh a, [rLY]
 	cp 144
