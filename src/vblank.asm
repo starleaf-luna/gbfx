@@ -94,9 +94,6 @@ ENDR
 
 	; pop af ; Pop off return address as well to exit infinite loop
 .lagFrame
-	ldh a, [rLY]
-	cp 144
-	jr c, .lagFrame
 	call UpdateCGBPalettes
 	pop hl
 	pop de
